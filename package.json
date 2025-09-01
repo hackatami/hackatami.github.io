@@ -1,9 +1,9 @@
 {
-  "name": "hacktami-website",
+  "name": "hackatami-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hacktami.github.io/",
+  "homepage": "https://hackatami.github.io/hackatami.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
