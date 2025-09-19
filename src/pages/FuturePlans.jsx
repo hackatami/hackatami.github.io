@@ -1,83 +1,47 @@
-import { FiCalendar, FiUsers, FiTrendingUp, FiArrowRight, FiStar, FiTarget, FiTrophy } from 'react-icons/fi'
+import { FiCalendar, FiUsers, FiArrowRight, FiStar, FiTarget } from 'react-icons/fi'
 import './FuturePlans.css'
 
 const FuturePlans = () => {
   const roadmapItems = [
     {
-      quarter: 'Short Term',
+      quarter: 'Now',
       status: 'active',
-      title: 'Skill Development',
-      description: 'Focus on improving our collective CTF and penetration testing skills.',
+      title: 'CTF Practice',
+      description: 'Weekly practice on OverTheWire and HackTheBox.',
       initiatives: [
         {
-          title: 'Consistent Tuesday Practice',
-          description: 'Regular attendance and focused practice on OverTheWire and HackTheBox challenges.',
-          impact: 'Build fundamental skills and team coordination',
+          title: 'Tuesday Sessions',
+          description: 'Meet every Tuesday at Tami hackerspace for CTF practice.',
+          impact: 'Build skills and team coordination',
           timeline: 'Ongoing'
-        },
-        {
-          title: 'Challenge Diversity',
-          description: 'Expand beyond basic challenges to cover web, crypto, forensics, and binary exploitation.',
-          impact: 'Develop well-rounded cybersecurity skillset',
-          timeline: 'Next 6 months'
-        },
-        {
-          title: 'Team Coordination',
-          description: 'Improve collaboration and knowledge sharing during CTF sessions.',
-          impact: 'Better team performance in competitive scenarios',
-          timeline: 'Ongoing improvement'
         }
       ]
     },
     {
-      quarter: 'Medium Term',
+      quarter: 'Soon',
       status: 'planning',
-      title: 'Competition Readiness',
-      description: 'Prepare to represent Tami hackerspace in regional and international competitions.',
+      title: 'Competitions',
+      description: 'Participate in CTF competitions as Tami team.',
       initiatives: [
         {
-          title: 'Live CTF Participation',
-          description: 'Start participating in online CTF competitions as a team.',
-          impact: 'Gain real competition experience and test our skills',
-          timeline: '6-12 months'
-        },
-        {
-          title: 'Specialized Roles',
-          description: 'Develop individual expertise in different areas (web, crypto, reverse engineering, etc.).',
-          impact: 'Create a balanced competitive team',
-          timeline: '6-18 months'
-        },
-        {
-          title: 'Local Recognition',
-          description: 'Establish HackTami as a respected cybersecurity group in the Israeli community.',
-          impact: 'Build reputation and attract more skilled members',
-          timeline: '12-18 months'
+          title: 'Team Competitions',
+          description: 'Join online CTF competitions together.',
+          impact: 'Represent Tami hackerspace',
+          timeline: 'Next year'
         }
       ]
     },
     {
-      quarter: 'Long Term',
+      quarter: 'Later',
       status: 'vision',
-      title: 'Bug Bounty Transition',
-      description: 'Move from educational CTFs to real-world bug bounty hunting for profit.',
+      title: 'Bug Bounties',
+      description: 'Collaborative bug bounty sessions.',
       initiatives: [
         {
-          title: 'Real Target Practice',
-          description: 'Transition to collaborative bug bounty sessions targeting real applications.',
-          impact: 'Generate income while improving real-world security',
-          timeline: '1-2 years'
-        },
-        {
-          title: 'Revenue Sharing',
-          description: 'Develop fair system for sharing bug bounty rewards between participants and Tami.',
-          impact: 'Sustainable funding for both individuals and the hackerspace',
-          timeline: '1-2 years'
-        },
-        {
-          title: 'Mentorship Program',
-          description: 'Help train new members while maintaining our competitive edge.',
-          impact: 'Grow the community and ensure knowledge transfer',
-          timeline: '2+ years'
+          title: 'Real Targets',
+          description: 'Work together on bug bounty targets.',
+          impact: 'Generate income for group and Tami',
+          timeline: 'Future'
         }
       ]
     }
@@ -87,31 +51,31 @@ const FuturePlans = () => {
     {
       icon: FiTarget,
       title: 'Skill Building',
-      description: 'Systematically improve our cybersecurity skills through regular practice and learning.',
+      description: 'Improve cybersecurity skills through Tuesday CTF practice.',
       goals: [
-        'Master fundamental CTF categories',
-        'Develop team coordination skills',
-        'Build consistent practice routine'
-      ]
-    },
-    {
-      icon: FiTrophy,
-      title: 'Competition Ready',
-      description: 'Become competitive enough to represent Tami hackerspace in cybersecurity competitions.',
-      goals: [
-        'Participate in live CTF competitions',
-        'Establish specialized team roles',
-        'Gain recognition in Israeli cybersecurity community'
+        'OverTheWire challenges',
+        'HackTheBox machines',
+        'Team coordination'
       ]
     },
     {
       icon: FiUsers,
-      title: 'Bug Bounty Future',
-      description: 'Transition to real-world bug bounty hunting for practical impact and income.',
+      title: 'Competition Ready',
+      description: 'Represent Tami hackerspace in competitions.',
       goals: [
-        'Collaborative bug bounty sessions',
-        'Fair revenue sharing system',
-        'Sustainable funding model for Tami'
+        'Live CTF participation',
+        'Team specialization',
+        'Community recognition'
+      ]
+    },
+    {
+      icon: FiStar,
+      title: 'Bug Bounty Future',
+      description: 'Transition to collaborative bug bounty work.',
+      goals: [
+        'Real target practice',
+        'Revenue sharing',
+        'Sustainable funding'
       ]
     }
   ]
@@ -128,7 +92,7 @@ const FuturePlans = () => {
   const getStatusIcon = (status) => {
     switch (status) {
       case 'active': return FiTarget
-      case 'planning': return FiTrophy
+      case 'planning': return FiUsers
       case 'vision': return FiStar
       default: return FiTarget
     }
@@ -140,10 +104,9 @@ const FuturePlans = () => {
       <section className="page-header">
         <div className="container">
           <div className="header-content">
-            <h1>Our Goals</h1>
+            <h1>Goals</h1>
             <p>
-              Our roadmap for developing from a learning group into a competitive team 
-              that represents Tami hackerspace, and eventually transitions to bug bounty work.
+              Practice → Compete → Earn.
             </p>
           </div>
         </div>
@@ -153,10 +116,7 @@ const FuturePlans = () => {
       <section className="roadmap">
         <div className="container">
           <div className="section-header">
-            <h2>Development Roadmap</h2>
-            <p>
-              Our progression from beginner CTF group to competitive team and eventually bug bounty hunters.
-            </p>
+            <h2>Roadmap</h2>
           </div>
 
           <div className="roadmap-timeline">
@@ -216,11 +176,7 @@ const FuturePlans = () => {
       <section className="long-term-vision">
         <div className="container">
           <div className="section-header">
-            <h2>Key Focus Areas</h2>
-            <p>
-              The main areas we're focusing on to achieve our goals of becoming 
-              competitive and eventually transitioning to bug bounty work.
-            </p>
+            <h2>Focus</h2>
           </div>
           
           <div className="vision-grid">
@@ -255,37 +211,17 @@ const FuturePlans = () => {
         <div className="container">
           <div className="involvement-content">
             <div className="involvement-text">
-              <h2>Join Our Journey</h2>
-              <p>
-                Be part of our development from CTF beginners to competitive team. 
-                We welcome all skill levels and learn together every Tuesday.
-              </p>
-              
-              <div className="involvement-ways">
-                <div className="involvement-way">
-                  <h4>Regular Attendance</h4>
-                  <p>Join our Tuesday sessions at Tami hackerspace for consistent practice.</p>
-                </div>
-                
-                <div className="involvement-way">
-                  <h4>Skill Sharing</h4>
-                  <p>Share your knowledge and learn from others in our collaborative environment.</p>
-                </div>
-                
-                <div className="involvement-way">
-                  <h4>Team Building</h4>
-                  <p>Help us develop as a cohesive team ready for competitions.</p>
-                </div>
-              </div>
+              <h2>Join</h2>
+              <p>Tuesdays at Tami.</p>
             </div>
             
             <div className="involvement-cta">
               <div className="cta-buttons">
                 <a href="#telegram" className="btn btn-primary">
-                  Join Telegram
+                  Telegram
                 </a>
                 <a href="#meetup" className="btn btn-secondary">
-                  Tuesday Meetups
+                  Meetup
                 </a>
               </div>
             </div>

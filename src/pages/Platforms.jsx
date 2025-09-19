@@ -6,61 +6,38 @@ const Platforms = () => {
     {
       title: 'Communication',
       icon: FiMessageCircle,
-      description: 'Stay connected with the HackTami community.',
+      description: 'Stay connected.',
       platforms: [
         {
-          name: 'Telegram Group',
-          description: 'Our main communication channel for updates, discussions, and coordination.',
-          url: '#telegram-hacktami',
-          features: ['Event notifications', 'Challenge discussions', 'Resource sharing', 'Community chat'],
-          members: 'Active members',
-          activity: 'Daily updates'
+          name: 'Telegram',
+          description: 'Updates and discussions.',
+          url: '#telegram',
+          features: ['Notifications', 'Chat'],
+          members: 'Members',
+          activity: 'Daily'
         }
       ]
     },
     {
-      title: 'Learning Platforms',
+      title: 'Practice',
       icon: FiTarget,
-      description: 'CTF platforms we practice on together.',
+      description: 'CTF platforms.',
       platforms: [
         {
           name: 'OverTheWire',
-          description: 'Linux-based wargames that we solve during our Tuesday sessions.',
+          description: 'Linux wargames.',
           url: 'https://overthewire.org',
-          features: ['Bandit series', 'Natas web challenges', 'Krypton crypto', 'Progressive difficulty'],
-          members: 'Group practice',
-          activity: 'Every Tuesday'
+          features: ['Bandit', 'Natas'],
+          members: 'Group',
+          activity: 'Tuesday'
         },
         {
           name: 'HackTheBox',
-          description: 'Penetration testing practice with retired machines and challenges.',
+          description: 'Penetration testing.',
           url: 'https://hackthebox.com',
-          features: ['Retired machines', 'Team collaboration', 'Realistic scenarios', 'TAMI team'],
-          members: 'Team members',
-          activity: 'Regular practice'
-        },
-        {
-          name: 'Custom CTFs',
-          description: 'Member-created challenges and online CTF competitions.',
-          url: '#custom-ctfs',
-          features: ['Community challenges', 'Online competitions', 'Educational focus', 'Skill building'],
-          members: 'All levels',
-          activity: 'As available'
-        }
-      ]
-    },
-    {
-      title: 'Meetups',
-      icon: FiCalendar,
-      description: 'In-person meetings at Tami hackerspace.',
-      platforms: [
-        {
-          name: 'Tuesday Sessions',
-          description: 'Regular meetups every Tuesday at Tami hackerspace in Tel Aviv.',
-          url: '#meetup-tuesday',
-          features: ['Hands-on practice', 'Collaborative learning', 'All skill levels', 'Free attendance'],
-          members: 'Open to all',
-          activity: 'Every Tuesday'
+          features: ['Machines', 'Team'],
+          members: 'TAMI team',
+          activity: 'Regular'
         }
       ]
     }
@@ -69,8 +46,7 @@ const Platforms = () => {
   const quickLinks = [
     { icon: FiMessageCircle, name: 'Telegram', url: '#telegram', color: '#0088cc' },
     { icon: FiTarget, name: 'OverTheWire', url: 'https://overthewire.org', color: '#ff6b35' },
-    { icon: FiTarget, name: 'HackTheBox', url: 'https://hackthebox.com', color: '#9FEF00' },
-    { icon: FiCalendar, name: 'Meetup', url: '#meetup', color: '#ed1c40' }
+    { icon: FiTarget, name: 'HackTheBox', url: 'https://hackthebox.com', color: '#9FEF00' }
   ]
 
   return (
@@ -79,10 +55,9 @@ const Platforms = () => {
       <section className="page-header">
         <div className="container">
           <div className="header-content">
-            <h1>Our Platforms</h1>
+            <h1>Platforms</h1>
             <p>
-              The platforms we use for communication, learning, and meeting up. 
-              Simple and focused on what we actually need for our Tuesday CTF sessions.
+              What we use.
             </p>
             
             {/* Quick Links */}
@@ -188,57 +163,6 @@ const Platforms = () => {
       </section>
 
 
-      {/* Getting Started */}
-      <section className="getting-started-platforms">
-        <div className="container">
-          <div className="getting-started-content">
-            <div className="getting-started-text">
-              <h2>How to Join</h2>
-              <p>
-                Simple steps to start participating in our Tuesday CTF sessions at Tami hackerspace.
-              </p>
-              
-              <div className="recommended-flow">
-                <div className="flow-step">
-                  <div className="step-number">1</div>
-                  <div className="step-content">
-                    <h4>Join Telegram</h4>
-                    <p>Connect with our Telegram group to get updates about Tuesday meetings.</p>
-                  </div>
-                </div>
-                
-                <div className="flow-step">
-                  <div className="step-number">2</div>
-                  <div className="step-content">
-                    <h4>Come on Tuesday</h4>
-                    <p>Show up at Tami hackerspace in Tel Aviv for our weekly CTF sessions.</p>
-                  </div>
-                </div>
-                
-                <div className="flow-step">
-                  <div className="step-number">3</div>
-                  <div className="step-content">
-                    <h4>Start Practicing</h4>
-                    <p>Jump into OverTheWire, HackTheBox, or custom challenges with the group.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="getting-started-cta">
-              <h3>Ready to Join?</h3>
-              <div className="starter-platforms">
-                <a href="#telegram" className="btn btn-primary">
-                  Join Telegram
-                </a>
-                <a href="#meetup" className="btn btn-secondary">
-                  Tuesday Meetups
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
