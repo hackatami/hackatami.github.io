@@ -1,186 +1,136 @@
-import { FiCalendar, FiUsers, FiTrendingUp, FiArrowRight, FiStar, FiCheck, FiClock } from 'react-icons/fi'
+import { FiCalendar, FiUsers, FiTrendingUp, FiArrowRight, FiStar, FiTarget, FiTrophy } from 'react-icons/fi'
 import './FuturePlans.css'
 
 const FuturePlans = () => {
   const roadmapItems = [
     {
-      quarter: 'Q1 2025',
+      quarter: 'Short Term',
+      status: 'active',
+      title: 'Skill Development',
+      description: 'Focus on improving our collective CTF and penetration testing skills.',
+      initiatives: [
+        {
+          title: 'Consistent Tuesday Practice',
+          description: 'Regular attendance and focused practice on OverTheWire and HackTheBox challenges.',
+          impact: 'Build fundamental skills and team coordination',
+          timeline: 'Ongoing'
+        },
+        {
+          title: 'Challenge Diversity',
+          description: 'Expand beyond basic challenges to cover web, crypto, forensics, and binary exploitation.',
+          impact: 'Develop well-rounded cybersecurity skillset',
+          timeline: 'Next 6 months'
+        },
+        {
+          title: 'Team Coordination',
+          description: 'Improve collaboration and knowledge sharing during CTF sessions.',
+          impact: 'Better team performance in competitive scenarios',
+          timeline: 'Ongoing improvement'
+        }
+      ]
+    },
+    {
+      quarter: 'Medium Term',
       status: 'planning',
-      title: 'Advanced Learning Paths',
-      description: 'Launch specialized learning tracks for advanced cybersecurity topics.',
+      title: 'Competition Readiness',
+      description: 'Prepare to represent Tami hackerspace in regional and international competitions.',
       initiatives: [
         {
-          title: 'Malware Analysis Track',
-          description: 'Comprehensive course covering static and dynamic malware analysis techniques.',
-          impact: 'Enable members to analyze and understand modern threats',
-          timeline: 'January - March 2025'
+          title: 'Live CTF Participation',
+          description: 'Start participating in online CTF competitions as a team.',
+          impact: 'Gain real competition experience and test our skills',
+          timeline: '6-12 months'
         },
         {
-          title: 'Red Team Operations',
-          description: 'Advanced penetration testing and red team methodology training.',
-          impact: 'Develop advanced offensive security capabilities',
-          timeline: 'February - April 2025'
+          title: 'Specialized Roles',
+          description: 'Develop individual expertise in different areas (web, crypto, reverse engineering, etc.).',
+          impact: 'Create a balanced competitive team',
+          timeline: '6-18 months'
         },
         {
-          title: 'Cloud Security Specialization',
-          description: 'Focus on AWS, Azure, and GCP security best practices and assessments.',
-          impact: 'Address growing demand for cloud security expertise',
-          timeline: 'March - May 2025'
+          title: 'Local Recognition',
+          description: 'Establish HackTami as a respected cybersecurity group in the Israeli community.',
+          impact: 'Build reputation and attract more skilled members',
+          timeline: '12-18 months'
         }
       ]
     },
     {
-      quarter: 'Q2 2025',
-      status: 'planning',
-      title: 'Platform Improvements',
-      description: 'Major upgrades to our learning platform and community tools.',
+      quarter: 'Long Term',
+      status: 'vision',
+      title: 'Bug Bounty Transition',
+      description: 'Move from educational CTFs to real-world bug bounty hunting for profit.',
       initiatives: [
         {
-          title: 'AI-Powered Learning Assistant',
-          description: 'Integration of AI to provide personalized learning recommendations.',
-          impact: 'Improve learning efficiency and personalization',
-          timeline: 'April - June 2025'
+          title: 'Real Target Practice',
+          description: 'Transition to collaborative bug bounty sessions targeting real applications.',
+          impact: 'Generate income while improving real-world security',
+          timeline: '1-2 years'
         },
         {
-          title: 'Virtual Lab Environment',
-          description: 'Cloud-based isolated environments for safe security testing.',
-          impact: 'Provide accessible hands-on learning environments',
-          timeline: 'May - July 2025'
+          title: 'Revenue Sharing',
+          description: 'Develop fair system for sharing bug bounty rewards between participants and Tami.',
+          impact: 'Sustainable funding for both individuals and the hackerspace',
+          timeline: '1-2 years'
         },
         {
-          title: 'Mobile Learning App',
-          description: 'Mobile application for on-the-go learning and community interaction.',
-          impact: 'Increase accessibility and engagement',
-          timeline: 'June - August 2025'
-        }
-      ]
-    },
-    {
-      quarter: 'Q3 2025',
-      status: 'research',
-      title: 'Community Expansion',
-      description: 'Scale our community and establish new partnerships.',
-      initiatives: [
-        {
-          title: 'International Chapters',
-          description: 'Establish Hackatami chapters in major cities worldwide.',
-          impact: 'Create global cybersecurity learning network',
-          timeline: 'July - September 2025'
-        },
-        {
-          title: 'Industry Mentorship Program',
-          description: 'Connect members with experienced cybersecurity professionals.',
-          impact: 'Provide career guidance and networking opportunities',
-          timeline: 'August - October 2025'
-        },
-        {
-          title: 'Corporate Training Solutions',
-          description: 'Develop customized cybersecurity training for organizations.',
-          impact: 'Expand impact to corporate security teams',
-          timeline: 'September - November 2025'
-        }
-      ]
-    },
-    {
-      quarter: 'Q4 2025',
-      status: 'ideation',
-      title: 'Certification Programs',
-      description: 'Launch industry-recognized certification programs.',
-      initiatives: [
-        {
-          title: 'Hackatami Certified Ethical Hacker',
-          description: 'Comprehensive certification program covering ethical hacking fundamentals.',
-          impact: 'Provide recognized credentials for career advancement',
-          timeline: 'October - December 2025'
-        },
-        {
-          title: 'Incident Response Specialist',
-          description: 'Specialized certification in cybersecurity incident response.',
-          impact: 'Address skill gap in incident response capabilities',
-          timeline: 'November 2025 - January 2026'
-        },
-        {
-          title: 'Security Awareness Trainer',
-          description: 'Certification for professionals training non-technical staff.',
-          impact: 'Improve overall organizational security posture',
-          timeline: 'December 2025 - February 2026'
+          title: 'Mentorship Program',
+          description: 'Help train new members while maintaining our competitive edge.',
+          impact: 'Grow the community and ensure knowledge transfer',
+          timeline: '2+ years'
         }
       ]
     }
   ]
 
-  const upcomingEvents = [
+  const currentGoals = [
     {
-      title: 'Hackatami Global CTF 2025',
-      date: 'March 15-17, 2025',
-      description: 'Our biggest CTF competition yet, featuring international teams and advanced challenges.',
-      registrations: 'Opening February 1st',
-      prizes: '$10,000 in prizes'
-    },
-    {
-      title: 'Cybersecurity Career Fair',
-      date: 'May 20, 2025',
-      description: 'Connect with leading cybersecurity employers and explore career opportunities.',
-      registrations: 'Opening March 1st',
-      prizes: '50+ companies participating'
-    },
-    {
-      title: 'Annual Security Research Conference',
-      date: 'August 12-14, 2025',
-      description: 'Premier conference showcasing latest cybersecurity research and innovations.',
-      registrations: 'Opening June 1st',
-      prizes: '100+ speakers expected'
-    }
-  ]
-
-  const longTermVision = [
-    {
-      icon: FiStar,
-      title: 'Global Impact',
-      description: 'Become the leading global platform for cybersecurity education and community building.',
+      icon: FiTarget,
+      title: 'Skill Building',
+      description: 'Systematically improve our cybersecurity skills through regular practice and learning.',
       goals: [
-        '1 million active community members worldwide',
-        'Presence in 50+ countries',
-        'Recognition as top cybersecurity education platform'
+        'Master fundamental CTF categories',
+        'Develop team coordination skills',
+        'Build consistent practice routine'
+      ]
+    },
+    {
+      icon: FiTrophy,
+      title: 'Competition Ready',
+      description: 'Become competitive enough to represent Tami hackerspace in cybersecurity competitions.',
+      goals: [
+        'Participate in live CTF competitions',
+        'Establish specialized team roles',
+        'Gain recognition in Israeli cybersecurity community'
       ]
     },
     {
       icon: FiUsers,
-      title: 'Educational Excellence',
-      description: 'Set the standard for practical, ethical cybersecurity education.',
+      title: 'Bug Bounty Future',
+      description: 'Transition to real-world bug bounty hunting for practical impact and income.',
       goals: [
-        'University-level accredited programs',
-        'Industry-standard certification pathways',
-        'Continuous curriculum innovation'
-      ]
-    },
-    {
-      icon: FiTrendingUp,
-      title: 'Innovation Leadership',
-      description: 'Drive innovation in cybersecurity education and community engagement.',
-      goals: [
-        'Cutting-edge learning technologies',
-        'Novel security research contributions',
-        'Thought leadership in ethical hacking'
+        'Collaborative bug bounty sessions',
+        'Fair revenue sharing system',
+        'Sustainable funding model for Tami'
       ]
     }
   ]
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'planning': return 'var(--color-matrix-green)'
-      case 'research': return 'var(--color-warning)'
-      case 'ideation': return 'var(--color-text-secondary)'
+      case 'active': return 'var(--color-matrix-green)'
+      case 'planning': return 'var(--color-warning)'
+      case 'vision': return 'var(--color-text-secondary)'
       default: return 'var(--color-text-secondary)'
     }
   }
 
   const getStatusIcon = (status) => {
     switch (status) {
-      case 'planning': return FiCheck
-      case 'research': return FiClock
-      case 'ideation': return FiStar
-      default: return FiClock
+      case 'active': return FiTarget
+      case 'planning': return FiTrophy
+      case 'vision': return FiStar
+      default: return FiTarget
     }
   }
 
@@ -190,11 +140,10 @@ const FuturePlans = () => {
       <section className="page-header">
         <div className="container">
           <div className="header-content">
-            <h1>Future Plans</h1>
+            <h1>Our Goals</h1>
             <p>
-              Discover our roadmap for advancing cybersecurity education, 
-              expanding our community, and driving innovation in ethical hacking. 
-              Join us as we shape the future of cybersecurity learning.
+              Our roadmap for developing from a learning group into a competitive team 
+              that represents Tami hackerspace, and eventually transitions to bug bounty work.
             </p>
           </div>
         </div>
@@ -204,10 +153,9 @@ const FuturePlans = () => {
       <section className="roadmap">
         <div className="container">
           <div className="section-header">
-            <h2>2025 Roadmap</h2>
+            <h2>Development Roadmap</h2>
             <p>
-              Our strategic plan for the next year, focusing on educational excellence, 
-              platform innovation, and community growth.
+              Our progression from beginner CTF group to competitive team and eventually bug bounty hunters.
             </p>
           </div>
 
@@ -264,76 +212,34 @@ const FuturePlans = () => {
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="upcoming-events">
-        <div className="container">
-          <div className="section-header">
-            <h2>Upcoming Major Events</h2>
-            <p>
-              Mark your calendars for these exciting events that will bring our 
-              community together and advance cybersecurity education.
-            </p>
-          </div>
-          
-          <div className="events-grid">
-            {upcomingEvents.map((event, index) => (
-              <div key={index} className="event-card">
-                <div className="event-header">
-                  <h3>{event.title}</h3>
-                  <div className="event-date">
-                    <FiCalendar />
-                    {event.date}
-                  </div>
-                </div>
-                
-                <p className="event-description">{event.description}</p>
-                
-                <div className="event-details">
-                  <div className="event-detail">
-                    <strong>Registration:</strong> {event.registrations}
-                  </div>
-                  <div className="event-detail">
-                    <strong>Special:</strong> {event.prizes}
-                  </div>
-                </div>
-                
-                <button className="btn btn-primary event-cta">
-                  Learn More <FiArrowRight />
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Long-term Vision */}
+      {/* Current Goals */}
       <section className="long-term-vision">
         <div className="container">
           <div className="section-header">
-            <h2>Long-term Vision</h2>
+            <h2>Key Focus Areas</h2>
             <p>
-              Our ambitious goals for transforming cybersecurity education 
-              and building a global community of ethical hackers.
+              The main areas we're focusing on to achieve our goals of becoming 
+              competitive and eventually transitioning to bug bounty work.
             </p>
           </div>
           
           <div className="vision-grid">
-            {longTermVision.map((vision, index) => {
-              const IconComponent = vision.icon
+            {currentGoals.map((goal, index) => {
+              const IconComponent = goal.icon
               return (
                 <div key={index} className="vision-card">
                   <div className="vision-icon">
                     <IconComponent />
                   </div>
                   
-                  <h3>{vision.title}</h3>
-                  <p className="vision-description">{vision.description}</p>
+                  <h3>{goal.title}</h3>
+                  <p className="vision-description">{goal.description}</p>
                   
                   <div className="vision-goals">
                     <h4>Key Goals:</h4>
                     <ul>
-                      {vision.goals.map((goal, goalIndex) => (
-                        <li key={goalIndex}>{goal}</li>
+                      {goal.goals.map((goalItem, goalIndex) => (
+                        <li key={goalIndex}>{goalItem}</li>
                       ))}
                     </ul>
                   </div>
@@ -349,38 +255,37 @@ const FuturePlans = () => {
         <div className="container">
           <div className="involvement-content">
             <div className="involvement-text">
-              <h2>Help Shape Our Future</h2>
+              <h2>Join Our Journey</h2>
               <p>
-                Our future plans are driven by community input and collaboration. 
-                We want to hear your ideas, suggestions, and feedback to ensure 
-                we&apos;re building the cybersecurity education platform you need.
+                Be part of our development from CTF beginners to competitive team. 
+                We welcome all skill levels and learn together every Tuesday.
               </p>
               
               <div className="involvement-ways">
                 <div className="involvement-way">
-                  <h4>Community Feedback</h4>
-                  <p>Share your thoughts on our roadmap and suggest new initiatives.</p>
+                  <h4>Regular Attendance</h4>
+                  <p>Join our Tuesday sessions at Tami hackerspace for consistent practice.</p>
                 </div>
                 
                 <div className="involvement-way">
-                  <h4>Volunteer Opportunities</h4>
-                  <p>Join our teams and help implement these exciting projects.</p>
+                  <h4>Skill Sharing</h4>
+                  <p>Share your knowledge and learn from others in our collaborative environment.</p>
                 </div>
                 
                 <div className="involvement-way">
-                  <h4>Partnership Proposals</h4>
-                  <p>Explore collaboration opportunities with organizations and educators.</p>
+                  <h4>Team Building</h4>
+                  <p>Help us develop as a cohesive team ready for competitions.</p>
                 </div>
               </div>
             </div>
             
             <div className="involvement-cta">
               <div className="cta-buttons">
-                <a href="#feedback" className="btn btn-primary">
-                  Share Feedback
+                <a href="#telegram" className="btn btn-primary">
+                  Join Telegram
                 </a>
-                <a href="#volunteer" className="btn btn-secondary">
-                  Volunteer With Us
+                <a href="#meetup" className="btn btn-secondary">
+                  Tuesday Meetups
                 </a>
               </div>
             </div>

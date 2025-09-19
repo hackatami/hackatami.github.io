@@ -6,53 +6,32 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      name: 'GitHub',
-      url: 'https://github.com/hacktami',
-      icon: FiGithub
-    },
-    {
-      name: 'Twitter',
-      url: '#twitter',
-      icon: FiTwitter
-    },
-    {
-      name: 'LinkedIn',
-      url: '#linkedin',
-      icon: FiLinkedin
-    },
-    {
-      name: 'Email',
-      url: 'mailto:contact@hacktami.com',
+      name: 'Telegram',
+      url: '#telegram',
       icon: FiMail
+    },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/hackatami',
+      icon: FiGithub
     }
   ]
 
   const footerLinks = [
     {
-      title: 'Community',
+      title: 'Join Us',
       links: [
-        { name: 'Join Us', url: '#join' },
-        { name: 'Code of Conduct', url: '#conduct' },
-        { name: 'Events', url: '#events' },
-        { name: 'Resources', url: '#resources' }
+        { name: 'Telegram Group', url: '#telegram' },
+        { name: 'Tuesday Meetups', url: '#meetup' },
+        { name: 'Tami Hackerspace', url: '#tami' }
       ]
     },
     {
-      title: 'Learning',
+      title: 'Practice',
       links: [
-        { name: 'Tutorials', url: '#tutorials' },
-        { name: 'CTF Challenges', url: '#ctf' },
-        { name: 'Workshops', url: '#workshops' },
-        { name: 'Certifications', url: '#certs' }
-      ]
-    },
-    {
-      title: 'Support',
-      links: [
-        { name: 'Documentation', url: '#docs' },
-        { name: 'Help Center', url: '#help' },
-        { name: 'Contact Us', url: '#contact' },
-        { name: 'Report Issue', url: '#report' }
+        { name: 'OverTheWire', url: 'https://overthewire.org' },
+        { name: 'HackTheBox', url: 'https://hackthebox.com' },
+        { name: 'Custom CTFs', url: '#custom-ctfs' }
       ]
     }
   ]
@@ -65,10 +44,10 @@ const Footer = () => {
           <div className="footer-main">
             {/* Logo and Description */}
             <div className="footer-brand">
-              <h3 className="footer-logo">Hackatami</h3>
+              <h3 className="footer-logo">HackTami</h3>
               <p className="footer-description">
-                Empowering the next generation of cybersecurity professionals through
-                hands-on learning, ethical hacking, and community collaboration.
+                A cybersecurity learning group meeting every Tuesday at Tami hackerspace in Tel Aviv, 
+                working together on CTF challenges and building towards competition readiness.
               </p>
               
               {/* Social Links */}
@@ -114,17 +93,11 @@ const Footer = () => {
           <div className="footer-bottom">
             <div className="footer-bottom-content">
               <p className="footer-copyright">
-                © {currentYear} Hackatami. All rights reserved.
+                © {currentYear} HackTami. Part of Tami Hackerspace community.
               </p>
               <p className="footer-made-with">
-                Made with <FiHeart className="heart-icon" /> by the cybersecurity community
+                Made with <FiHeart className="heart-icon" /> by the HackTami group
               </p>
-            </div>
-            
-            <div className="footer-legal">
-              <a href="#privacy" className="footer-legal-link">Privacy Policy</a>
-              <a href="#terms" className="footer-legal-link">Terms of Service</a>
-              <a href="#cookies" className="footer-legal-link">Cookie Policy</a>
             </div>
           </div>
         </div>

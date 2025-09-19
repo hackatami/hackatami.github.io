@@ -4,29 +4,29 @@ import './WhatWeDid.css'
 const WhatWeDid = () => {
   const achievements = [
     {
-      category: 'CTF & Challenges',
+      category: 'Current Activities',
       icon: FiFlag,
       items: [
         {
-          title: 'OverTheWire',
-          description: 'Linux based different machnies.',
+          title: 'OverTheWire Challenges',
+          description: 'Regularly practicing on various OverTheWire wargames during our Tuesday sessions.',
           date: 'Ongoing',
-          participants: 'Thuesday HackemTami events',
-          highlights: ['Natas', 'Bandit']
+          participants: 'Tuesday HackTami group',
+          highlights: ['Bandit series', 'Natas web challenges', 'Krypton cryptography', 'Collaborative solving']
         },
         {
-          title: 'HackTheBox',
-          description: 'CTF platform',
+          title: 'HackTheBox Practice',
+          description: 'Working through HackTheBox machines and challenges as a team.',
           date: 'Ongoing',
-          participants: 'Thuesday HackemTami events + TAMI HTB team',
-          highlights: ['Web security', 'Network analysis']
+          participants: 'Tuesday HackTami group + TAMI HTB team',
+          highlights: ['Retired machines', 'Web security', 'Network penetration', 'Team collaboration']
         },
         {
-          title: 'Beginner-Friendly CTF',
-          description: 'Specially designed challenges for newcomers to the cybersecurity field.',
-          date: 'January 2024',
-          participants: '180+ participants',
-          highlights: ['Educational writeups', 'Guided solutions', 'Mentorship program', 'Basic concepts']
+          title: 'Custom CTF Challenges',
+          description: 'Participating in and creating custom CTF challenges for group learning.',
+          date: 'Ongoing',
+          participants: 'Community members',
+          highlights: ['Member-created challenges', 'Educational focus', 'Skill progression', 'Knowledge sharing']
         }
       ]
     }
@@ -39,11 +39,10 @@ const WhatWeDid = () => {
       <section className="page-header">
         <div className="container">
           <div className="header-content">
-            <h1>What We Did</h1>
+            <h1>What We Do</h1>
             <p>
-              Explore our journey of achievements, contributions, and impact in the 
-              cybersecurity community. From CTF competitions to research publications, 
-              here&apos;s how we&apos;ve been making a difference.
+              Our ongoing activities and practice sessions as we work together to improve 
+              our cybersecurity skills through hands-on CTF challenges and collaborative learning.
             </p>
           </div>
         </div>
@@ -111,17 +110,17 @@ const WhatWeDid = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Want to Be Part of Our Next Achievement?</h2>
+            <h2>Want to Join Our CTF Sessions?</h2>
             <p>
-              Join our community and contribute to meaningful cybersecurity initiatives. 
-              Together, we can continue making a positive impact in the field.
+              Come practice with us every Tuesday at Tami hackerspace. 
+              All skill levels welcome - we learn together!
             </p>
             <div className="cta-buttons">
-              <a href="#join" className="btn btn-primary">
-                Join Our Community
+              <a href="#telegram" className="btn btn-primary">
+                Join Telegram Group
               </a>
-              <a href="#contribute" className="btn btn-secondary">
-                Start Contributing
+              <a href="#meetup" className="btn btn-secondary">
+                Tuesday Meetups
               </a>
             </div>
           </div>

@@ -9,8 +9,8 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', path: '/' },
-    { name: 'What We Did', path: '/what-we-did' },
-    { name: 'Future Plans', path: '/future-plans' },
+    { name: 'What We Do', path: '/what-we-did' },
+    { name: 'Our Goals', path: '/future-plans' },
     { name: 'Platforms', path: '/platforms' }
   ]
 
@@ -25,7 +25,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="logo">
             <FiShield className="logo-icon" />
-            <span className="logo-text">Hackatami</span>
+            <span className="logo-text">HackTami</span>
           </Link>
 
           {/* Desktop Navigation */}
