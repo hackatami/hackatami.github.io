@@ -353,7 +353,7 @@ const FuturePlans = () => {
               <p>
                 Our future plans are driven by community input and collaboration. 
                 We want to hear your ideas, suggestions, and feedback to ensure 
-                we're building the cybersecurity education platform you need.
+                we&apos;re building the cybersecurity education platform you need.
               </p>
               
               <div className="involvement-ways">

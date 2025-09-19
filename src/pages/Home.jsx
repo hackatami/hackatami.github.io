@@ -105,7 +105,7 @@ const Home = () => {
           <div className="mission-content">
             <div className="mission-text">
               <p>
-                At Hackatami, we believe that cybersecurity is not just about technology—it's about 
+                At Hackatami, we believe that cybersecurity is not just about technology—it&apos;s about 
                 people, ethics, and community. We provide a platform where aspiring security 
                 professionals can learn, practice, and grow in a supportive environment.
               </p>
