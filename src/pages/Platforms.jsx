@@ -148,14 +148,6 @@ const Platforms = () => {
           features: ['Shared documentation', 'Research databases', 'Meeting notes', 'Knowledge base'],
           members: 'Team members',
           activity: 'Regular updates'
-        },
-        {
-          name: 'YouTube Channel',
-          description: 'Educational videos, tutorials, and recorded workshops for the community.',
-          url: '#youtube-hackatami',
-          features: ['Tutorial videos', 'Workshop recordings', 'Live streams', 'Educational content'],
-          members: '8,500+ subscribers',
-          activity: 'Weekly uploads'
         }
       ]
     }
@@ -167,7 +159,6 @@ const Platforms = () => {
     { icon: FiLinkedin, name: 'LinkedIn', url: '#linkedin', color: '#0077B5' },
     { icon: FiTwitter, name: 'Twitter', url: '#twitter', color: '#1DA1F2' },
     { icon: FiTarget, name: 'HTB', url: '#htb', color: '#9FEF00' },
-    { icon: FiBookOpen, name: 'YouTube', url: '#youtube', color: '#FF0000' }
   ]
 
   return (
